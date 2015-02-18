@@ -1,0 +1,57 @@
+<!-- Navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand logo" href="#/home">
+                <img id="earthme-logo" src="img/logo.png">
+            </a>
+            <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active">
+                    <a href="#/home">Home</a>
+                </li>
+                <li>
+                    <a href="#/about.html">About</a>
+                </li>
+                <li>
+                    <a href="" onclick="window.open('https://github.com/PistachoSoft/EarthMe-2.0','_blank')">Code</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Main container -->
+<div id="padding-to-navbar" class="container">
+
+    <!-- Welcome jumbotron -->
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="jumbotron" id="text-center">
+                <h3>Welcome to</h3>
+                <div class="line-separator"></div>
+                <img id="earthme-logo-jumbo" src="img/logo.png">
+                <h4 class="text-muted">Version 2.0</h4>
+                <div class="line-separator"></div>
+                <br>
+                <form class="form-inline" ng-submit="submitImage()">
+                    <div class="form-group">
+                        <input class="form-control" type="file" ng-model="imageFile">
+                    </div>
+                    <button class="btn btn-danger" type="submit">Submit!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer></footer>

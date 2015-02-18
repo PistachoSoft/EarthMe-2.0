@@ -1,0 +1,39 @@
+body {
+    background: url(../img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.line-separator {
+    height: 1px;
+    background: #717171;
+    border-bottom: 1px solid #313030;
+}
+
+#footer {
+    padding-top: 50px;
+}
+
+#earthme-logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -63px;
+    max-height: 32px;
+    max-width: 75%;
+    padding-bottom: 4px;
+}
+
+#earthme-logo-jumbo {
+    padding-top: 10px;
+    height: 50px;
+}
+
+#padding-to-navbar {
+    padding-top: 75px;
+}
+
+#text-center {
+    text-align: center;
+}
