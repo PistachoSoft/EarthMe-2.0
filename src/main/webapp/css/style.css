@@ -12,6 +12,10 @@ body {
     border-bottom: 1px solid #313030;
 }
 
+.text-center {
+    text-align: center;
+}
+
 #footer {
     padding-top: 50px;
 }
@@ -27,13 +31,13 @@ body {
 
 #earthme-logo-jumbo {
     padding-top: 10px;
-    height: 50px;
+    height: 100px;
 }
 
 #padding-to-navbar {
     padding-top: 75px;
 }
 
-#text-center {
-    text-align: center;
+#jumbo-transparent {
+    background-color: rgba(238,238,238,0.3);
 }
