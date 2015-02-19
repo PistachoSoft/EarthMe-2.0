@@ -35,7 +35,13 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="jumbotron text-center" id="jumbo-transparent">
-                <img ng-src="{{file}}">
+                <img class="img img-responsive" ng-src="{{file}}">
+                <br>
+                <div class="form-inline">
+                    <a class="btn btn-primary" href="{{file}}" download="filename">
+                        <span class="glyphicon glyphicon-cloud-download"></span> Download
+                    </a>
+                </div>
             </div>
         </div>
     </div>

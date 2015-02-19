@@ -1,7 +1,7 @@
 angular.module('starter')
 
     .service('fileUpload', ['$http', '$state', function ($http,$state) {
-        this.uploadFileToUrl = function(file, uploadUrl){
+        this.uploadFileToUrl = function(file, uploadUrl, callback){
             var fd = new FormData();
             fd.append('file', file);
             $http.post(uploadUrl, fd, {
@@ -10,7 +10,7 @@ angular.module('starter')
             }).success(function(data){
                 $state.go('result', {_filename: data.filename});
             }).error(function(){
-                alert("BOOM!");
+                callback(-1);
             });
         }
     }]);
