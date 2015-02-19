@@ -14,6 +14,12 @@ angular.module('starter', ['ui.router'])
                     controller: "MainCtrl"
                 })
 
+                .state('result', {
+                    url: "/result/:_filename",
+                    templateUrl: "templates/main/result.html",
+                    controller: "ResultCtrl"
+                })
+
                 .state('about', {
                     url: "/about",
                     templateUrl: "templates/main/about.html"
