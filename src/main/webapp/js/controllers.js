@@ -3,6 +3,7 @@ var API_URL = "http://127.0.0.1:5000";
 angular.module('starter')
 
     .controller('MainCtrl', [ '$scope', 'fileUpload', function($scope, fileUpload){
+        $scope.hiddenSpinner = true;
         $scope.hiddenErrorMessage = true;
 
         $scope.hideErrorMessage = function(){
@@ -10,11 +11,13 @@ angular.module('starter')
         }
 
         $scope.uploadFile = function(){
+            $scope.hiddenSpinner = false;
             $scope.hiddenErrorMessage = true;
             var file = $scope.myFile;
             console.log('file is ' + JSON.stringify(file));
             var uploadUrl = API_URL+"/api/upload";
             fileUpload.uploadFileToUrl(file, uploadUrl, function(data){
+                $scope.hiddenSpinner = true;
                 if(data===-1){
                     $scope.hiddenErrorMessage = false;
                 }

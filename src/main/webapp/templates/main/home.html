@@ -43,7 +43,7 @@
                 <br>
                 <form class="form-inline" ng-submit="uploadFile()">
                     <div class="form-group">
-                        <input class="form-control" type="file" file-model="myFile" ng-change="hideErrorMessage()"/>
+                        <input class="form-control" type="file" file-model="myFile" ng-click="hideErrorMessage()"/>
                     </div>
                     <button class="btn btn-danger" type="submit">Submit!</button>
                 </form>
@@ -53,11 +53,14 @@
                         There was an error. Wow. <span class="glyphicon glyphicon-ban-circle"></span>
                     </a>
                 </div>
+
+                <!-- Spinner -->
+                <div ng-hide="hiddenSpinner" id="overlay"></div>
             </div>
         </div>
     </div>
 
-</div>
+</div>>
 
 <!-- Footer -->
 <footer></footer>
