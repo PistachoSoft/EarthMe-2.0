@@ -41,9 +41,17 @@
                 <h4>Version 2.0</h4>
                 <div class="line-separator"></div>
                 <br>
-                <form class="form-inline" ng-submit="uploadFile()">
-                    <div class="form-group">
+                <form class="form-inline" role="form" ng-submit="uploadFile()">
+                    <!--<div class="form-group">
                         <input class="form-control" type="file" file-model="myFile" ng-click="hideErrorMessage()"/>
+                    </div>-->
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <span class="btn btn-primary btn-file">
+                                Browse&hellip; <input type="file"  file-model="myFile" ng-click="hideErrorMessage()">
+                            </span>
+                        </span>
+                        <input type="text" class="form-control" readonly>
                     </div>
                     <button class="btn btn-danger" type="submit">Submit!</button>
                 </form>
@@ -53,14 +61,14 @@
                         There was an error. Wow. <span class="glyphicon glyphicon-ban-circle"></span>
                     </a>
                 </div>
-
-                <!-- Spinner -->
-                <div ng-hide="hiddenSpinner" id="overlay"></div>
             </div>
         </div>
     </div>
 
 </div>>
+
+<!-- Spinner -->
+<div ng-hide="hiddenSpinner" id="overlay"></div>
 
 <!-- Footer -->
 <footer></footer>
