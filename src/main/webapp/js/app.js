@@ -22,8 +22,13 @@ angular.module('starter', ['ui.router'])
 
                 .state('about', {
                     url: "/about",
-                    templateUrl: "templates/main/about.html"
+                    templateUrl: "templates/main/about.html",
+                    controller: "AboutCtrl"
                 });
 
             $urlRouterProvider.otherwise('home');
-        });
+        })
+
+        .run(['$anchorScroll', function($anchorScroll) {
+            $anchorScroll.yOffset = 50;   // always scroll by 50 extra pixels
+        }]);

@@ -1,7 +1,18 @@
+/**
+ * API_URL base server location
+ * @type {string}
+ */
 var API_URL = "http://127.0.0.1:5000";
 
 angular.module('starter')
 
+    /**
+     * Main Controller
+     * In charge of:
+     *  - form consistance
+     *  - file uploading request
+     *  - spinner handling
+     */
     .controller('MainCtrl', [ '$scope', 'fileUpload', function($scope, fileUpload) {
         $scope.hiddenSpinner = true;
         $scope.hiddenErrorMessage = true;
@@ -10,6 +21,9 @@ angular.module('starter')
             $scope.hiddenErrorMessage = true;
         }
 
+        /**
+         * File upload request
+         */
         $scope.uploadFile = function () {
             $scope.hiddenSpinner = false;
             $scope.hiddenErrorMessage = true;
@@ -24,7 +38,9 @@ angular.module('starter')
             });
         };
 
-
+        /**
+         * File input scripts
+         */
         $(document).on('change', '.btn-file :file', function () {
             var input = $(this),
                 numFiles = input.get(0).files ? input.get(0).files.length : 1,
@@ -49,7 +65,26 @@ angular.module('starter')
         });
     }])
 
+    /**
+     * Result Controller
+     */
     .controller('ResultCtrl', [ '$scope', '$stateParams', function($scope,$stateParams){
         $scope.filename = $stateParams._filename;
         $scope.file = API_URL+"/api/uploads/"+$stateParams._filename;
+    }])
+
+    .controller('AboutCtrl', [ '$scope', '$anchorScroll', '$location', function($scope,$anchorScroll,$location){
+        $scope.goToAnchor = function(id){
+            var newHash = 'anchor' + id;
+            if ($location.hash() !== newHash) {
+                $location.hash('anchor' + id);
+            } else {
+                $anchorScroll();
+            }
+        };
+
+        $scope.backToTop = function(){
+            $location.hash('top');
+            $anchorScroll();
+        }
     }]);

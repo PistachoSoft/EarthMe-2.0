@@ -16,6 +16,10 @@ body {
     text-align: center;
 }
 
+.cursor-standard {
+    cursor: auto;
+}
+
 #footer {
     padding-top: 50px;
 }
@@ -32,6 +36,8 @@ body {
 #earthme-logo-jumbo {
     padding-top: 10px;
     height: 100px;
+    display: block;
+    margin: auto;
 }
 
 #padding-to-navbar {
@@ -39,12 +45,16 @@ body {
 }
 
 #jumbo-transparent {
-    background-color: rgba(238,238,238,0.3);
+    background-color: rgba(238, 238, 238, 0.3);
+}
+
+.jumbo-translucent {
+    background-color: rgba(238, 238, 238, 0.7);
 }
 
 #result-img {
-    display:block;
-    margin:auto;
+    display: block;
+    margin: auto;
 }
 
 .btn-file {
@@ -80,6 +90,6 @@ input[readonly] {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,.5) url(../img/ajax-loader.gif) center center no-repeat;
+    background: rgba(0, 0, 0, .5) url(../img/ajax-loader.gif) center center no-repeat;
     z-index: 999;
 }

@@ -1,5 +1,8 @@
 angular.module('starter')
 
+    /**
+     * Service in charge of file upload POST request
+     */
     .service('fileUpload', ['$http', '$state', function ($http,$state) {
         this.uploadFileToUrl = function(file, uploadUrl, callback){
             var fd = new FormData();
