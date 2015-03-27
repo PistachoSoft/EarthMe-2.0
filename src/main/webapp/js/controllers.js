@@ -75,6 +75,7 @@ angular.module('starter')
 
     .controller('AboutCtrl', [ '$scope', '$anchorScroll', '$location', function($scope,$anchorScroll,$location){
         $scope.goToAnchor = function(id){
+            $scope.anchoredAt = id;
             var newHash = 'anchor' + id;
             if ($location.hash() !== newHash) {
                 $location.hash('anchor' + id);
@@ -87,4 +88,43 @@ angular.module('starter')
             $location.hash('top');
             $anchorScroll();
         }
+        
+        $scope.elementInViewport = function(id) {
+            var el = document.getElementById("anchor"+id);
+            var top = el.offsetTop;
+            var left = el.offsetLeft;
+            var width = el.offsetWidth;
+            var height = el.offsetHeight;
+
+            while(el.offsetParent) {
+                el = el.offsetParent;
+                top += el.offsetTop;
+                left += el.offsetLeft;
+            }
+
+            return (
+                top < (window.pageYOffset + window.innerHeight) &&
+                left < (window.pageXOffset + window.innerWidth) &&
+                (top + height) > window.pageYOffset &&
+                (left + width) > window.pageXOffset
+            );
+        }
+        
+        $(window).scroll(function() {
+            if ($scope.elementInViewport(1)){
+                $("#toAnchor1").addClass("active")
+            } else{
+                $("#toAnchor1").removeClass("active");
+            } 
+            if ($scope.elementInViewport(2)){
+                $("#toAnchor2").addClass("active") 
+            } else {
+                $("#toAnchor2").removeClass("active");
+            } 
+            if ($scope.elementInViewport(3)) {
+                $("#toAnchor3").addClass("active")
+            } else {
+                $("#toAnchor3").removeClass("active");
+            }
+        });
     }]);

@@ -32,12 +32,11 @@
 <div id="padding-to-navbar" class="container">
     <div class="row">
         <div class="col-md-2">
-            <div class="text-center">
-                <div class="list-group fixed-header">
-                    <div class="list-group-item active">Contents</div>
-                    <a class="list-group-item" ng-click="goToAnchor(1)">About</a>
-                    <a class="list-group-item" ng-click="goToAnchor(2)">We</a>
-                    <a class="list-group-item" ng-click="goToAnchor(3)">Technologies</a>
+            <div class="text-center this" ui-scrollfix>
+                <div class="list-group">
+                    <a class="list-group-item" id="toAnchor1" ng-click="goToAnchor(1)">About</a>
+                    <a class="list-group-item" id="toAnchor2" ng-click="goToAnchor(2)">We</a>
+                    <a class="list-group-item" id="toAnchor3" ng-click="goToAnchor(3)">Technologies</a>
                 </div>
             </div>
         </div>
@@ -52,7 +51,7 @@
                 <p>Our first approach to the event was really confusing as it was everyone's first time ever participating
                  on a hackaton. We were rather unexperienced with modern technologies, mostly knowing Java, JSP, Matlab and
                  some basic HTML/CSS, in particular CSS was something really diffuse and weird.</p>
-                <p>So, we developed our first very serious web application ever, named <a href="" onclick="window.open('http://earthme.pistachosoft.com','_blank')">EarthMe!</a></p>
+                <p>So, we developed our first very serious web application ever, named <a href="" onclick="window.open('http://oldearthme.pistachosoft.com','_blank')">EarthMe!</a></p>
                 <p><b>* * *</b></p>
                 <p>Now, one year after, we have learned a lot more on technologies and development so, in commemoration of this
                  event that awoke our spirits on this amazing world, we decided to work on a revamp of EarthMe!</p>
@@ -74,7 +73,7 @@
                     </tr>
                     <tr class="active">
                         <td>Sergio Adrian Reyes</td>
-                        <td><a href="http://twitter.com/Schwarz_SPMkII">@Schwarz_SPMkII</a></td>
+                        <td><a href="http://twitter.com/SAReyes_">@SAReyes_</a></td>
                         <td>Backend development</td>
                     </tr>
                     <tr class="active">

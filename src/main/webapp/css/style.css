@@ -93,3 +93,17 @@ input[readonly] {
     background: rgba(0, 0, 0, .5) url(../img/ajax-loader.gif) center center no-repeat;
     z-index: 999;
 }
+
+
+
+@media(min-width: 990px){
+
+    .ui-scrollfix {
+        position: fixed;
+    }
+    
+    .this {
+        position: fixed;
+    }
+    
+}
